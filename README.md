@@ -1,11 +1,21 @@
 # Java JAR Test Project
 
-A production-ready Java application with automated deployment and AWS infrastructure provisioning, including Elastic Load Balancing (ELB) for high availability.
+A production-ready Java application with automated deployment and AWS infrastructure provisioning. This project demonstrates deployment to AWS EC2 with optional Elastic Load Balancer (ELB) configuration.
+
+## 🚀 Deployment Status
+
+### Current Deployment
+- **Instance IP**: [http://16.170.246.153:9000](http://16.170.246.153:9000)
+- **Health Check**: [http://16.170.246.153:9000/health](http://16.170.246.153:9000/health)
+- **Status**: 🟢 Running
+
+> **Note on Load Balancer**: 
+> The ELB configuration is not enabled in this deployment as it incurs additional AWS costs. The application is currently running on a single EC2 instance. For production deployments with high availability, consider enabling the ELB configuration in `deploy.sh` after reviewing the associated costs.
 
 ## 🚀 Key Features
 
 - **Automated Deployment**: Single-command deployment to AWS
-- **Load Balancing**: Integrated Elastic Load Balancer (ELB) setup
+- **Load Balancing**: Optional Elastic Load Balancer (ELB) setup (disabled by default)
 - **Containerization**: Docker support for consistent environments
 - **CI/CD Ready**: GitHub Actions workflow generation
 - **Infrastructure as Code**: Scripted AWS resource provisioning
